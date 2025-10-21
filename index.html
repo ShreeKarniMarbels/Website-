@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lal Chand Rathi — Rajasthani Marble & Granite</title>
+  <meta name="description" content="Premium Kishangarh & Rajsamand marbles and Rajasthan granites — Lal Chand Rathi">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#e6c07b;--muted:#99a2b2;--glass: rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071027 0%, #07172a 60%), url('images/pattern.jpg');background-attachment:fixed;color:#e6eef6}
+    header{position:sticky;top:0;backdrop-filter: blur(6px);background:linear-gradient(90deg, rgba(11,18,32,0.7), rgba(6,10,18,0.45));padding:12px 24px;display:flex;align-items:center;justify-content:space-between;z-index:50;border-bottom:1px solid rgba(255,255,255,0.03)}
+    header .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffd88a);display:flex;align-items:center;justify-content:center;font-weight:900;color:#081223}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+    .hero{max-width:1200px;margin:28px auto;padding:24px}
+
+    /* Top slider */
+    .slider{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 10px 40px rgba(2,6,23,0.7)}
+    .slides{display:flex;transition:transform 1s cubic-bezier(.2,.9,.2,1);width:300%}
+    .slide{min-width:100%;height:520px;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center;position:relative}
+    .slide::after{content:' ';position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,12,20,0.2), rgba(2,6,12,0.6))}
+    .slide .caption{position:relative;z-index:2;color:#fff;max-width:700px;padding:36px}
+    .caption h1{font-size:40px;margin:0 0 8px 0;letter-spacing:0.6px}
+    .caption p{margin:8px 0 18px;color:var(--muted)}
+    .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--accent);color:#071223;font-weight:700;text-decoration:none}
+
+    /* Quality marquee */
+    .qualities{margin-top:12px;display:flex;gap:12px;align-items:center}
+    .marquee{overflow:hidden;white-space:nowrap;padding:8px 12px;background:var(--glass);border-radius:12px}
+    .marquee .inner{display:inline-block;animation:scroll 12s linear infinite}
+    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+    /* content */
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:24px;margin-top:20px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px}
+    h2{color:#fff;margin:0 0 10px 0}
+    p.lead{color:var(--muted);line-height:1.6}
+    .story{margin-top:14px;opacity:0;transform:translateY(10px);animation:fadeUp 1s forwards;animation-delay:.2s}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+    /* right column */
+    .contact{position:sticky;top:100px}
+    .phone{display:flex;gap:10px;align-items:center;background:rgba(255,255,255,0.03);padding:12px;border-radius:12px}
+    .phone strong{color:var(--accent);font-size:18px}
+
+    /* product gallery */
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:10px}
+
+    /* modal */
+    .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,12,0.6);visibility:hidden;opacity:0;transition:opacity .25s}
+    .modal.open{visibility:visible;opacity:1}
+    .modal .box{background:#071022;padding:20px;border-radius:12px;max-width:740px;width:92%}
+
+    footer{margin-top:40px;padding:28px 20px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.03)}
+
+    /* small */
+    @media(max-width:900px){.grid{grid-template-columns:1fr}.slide{height:360px}.caption h1{font-size:26px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">LR</div>
+      <div>
+        <div style="font-weight:800">Lal Chand Rathi</div>
+        <div style="font-size:12px;color:var(--muted)">Kishangarh & Rajsamand Marbles • Rajasthan Granite</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#stories">Stories</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="hero" id="home">
+    <div class="slider card" aria-label="top-slider">
+      <div class="slides" id="slides">
+        <!-- Replace images/slide1.jpg with your actual Kishangarh / Rajsamand images (hosted in repo) -->
+        <div class="slide" style="background-image:url('images/slide1.jpg')">
+          <div class="caption">
+            <h1>Exquisite Kishangarh & Rajsamand Marble</h1>
+            <p class="lead">Hand-selected slabs, premium finishes — bringing Rajasthan's finest natural stone to your projects.</p>
+            <a class="cta" href="#contact">Request Quote</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image:url('images/slide2.jpg')">
+          <div class="caption">
+            <h1>Timeless Rajsamand Whites</h1>
+            <p class="lead">Classic, durable and luminous — ideal for flooring, cladding and bespoke interiors.</p>
+            <a class="cta" href="#gallery">View Samples</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image:url('images/slide3.jpg')">
+          <div class="caption">
+            <h1>Rajasthan Granite — Robust & Regal</h1>
+            <p class="lead">Strong, weather resistant granite for both interior and exterior applications.</p>
+            <a class="cta" href="#contact">Call Us</a>
+          </div>
+        </div>
+      </div>
+      <!-- slider controls -->
+      <button onclick="prevSlide()" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.35);border:none;color:#fff;padding:12px;border-radius:10px">◀</button>
+      <button onclick="nextSlide()" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.35);border:none;color:#fff;padding:12px;border-radius:10px">▶</button>
+    </div>
+
+    <div class="qualities" aria-hidden="false">
+      <div class="marquee card" style="flex:1">
+        <div class="inner">BEST QUALITY MARBLE &nbsp; • &nbsp; PREMIUM STONE &nbsp; • &nbsp; INDUSTRY STANDARD CUTS &nbsp; • &nbsp; DIRECT FROM RAJASTHAN QUARRIES &nbsp; • &nbsp; EXPORT-GRADE FINISHES</div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <button id="storyBtn" class="cta" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)">Read Stories</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section>
+        <div class="card story" style="animation-delay:.25s">
+          <h2 id="stories">Stories from Rajsamand & Kishangarh</h2>
+          <p class="lead">Rajasthan's marble legacy goes back generations. Rajsamand — often called 'The Marble City' — is famed for its white marble with subtle veins, prized by stonemasons and architects. Kishangarh, a major marble market, is renowned for both indigenous and imported Italian-style marbles traded and finished at scale. Together they supply everything from classical temple work to modern luxury interiors.</p>
+
+          <h3 style="margin-top:12px">How our stone is sourced</h3>
+          <p class="lead">We source directly from quarries around Rajsamand and the marketplaces of Kishangarh, hand-inspecting each block and slab. Sustainable cutting and quality-controlled polishing ensure every piece meets premium standards.</p>
+
+          <h3 style="margin-top:12px">Why choose marble & granite?</h3>
+          <p class="lead">Marble adds luminosity and elegance; granite delivers strength and longevity. Our range includes polished, honed, and textured finishes, suitable for floors, kitchens, façades and bespoke installations.</p>
+
+          <div style="margin-top:14px">
+            <button class="cta" onclick="openModal()">See Our Catalog</button>
+          </div>
+        </div>
+
+        <div class="card story" style="margin-top:14px">
+          <h2 id="gallery">Gallery — Sample Stones</h2>
+          <div class="gallery">
+            <img src="images/sample1.jpg" alt="Kishangarh Marble sample">
+            <img src="images/sample2.jpg" alt="Rajsamand Marble slab">
+            <img src="images/sample3.jpg" alt="Rajasthan Granite slab">
+            <img src="images/sample4.jpg" alt="Polished marble interior">
+          </div>
+        </div>
+      </section>
+
+      <aside class="contact">
+        <div class="card">
+          <h3>Contact Lal Chand Rathi</h3>
+          <p style="color:var(--muted)">We deliver pan-India. For inquiries, prices, or custom orders please reach out.</p>
+          <div class="phone" style="margin-top:12px">
+            <div style="font-size:12px;color:var(--muted)">Phone</div>
+            <div style="margin-left:auto"><strong>+91 94142 6442</strong><br><small style="color:var(--muted)">+91 90793 26153</small></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a class="cta" href="tel:+919414264442">Call Now</a>
+            <a class="cta" href="mailto:lalchandrathi@example.com" style="margin-left:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)">Email</a>
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:14px 0">
+          <div style="font-size:13px;color:var(--muted)">Address</div>
+          <div style="font-weight:700">Kishangarh / Rajsamand, Rajasthan</div>
+
+          <div style="margin-top:12px">
+            <label style="font-size:13px;color:var(--muted)">Quick message</label>
+            <textarea id="msg" rows="3" style="width:100%;margin-top:8px;border-radius:8px;padding:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:#eef"></textarea>
+            <button class="cta" style="margin-top:8px;width:100%" onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- modal / catalog -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true">
+      <div class="box">
+        <h3>Catalog & Samples</h3>
+        <p style="color:var(--muted)">Download our sample catalog or request a slab photo. (Replace these links with real files in your GitHub repo.)</p>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <a class="cta" href="#" onclick="closeModal();return false">Close</a>
+          <a class="cta" href="#" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)">Download PDF</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div>
+      © <strong>Lal Chand Rathi</strong> — Kishangarh & Rajsamand Marbles. All rights reserved.
+    </div>
+    <div style="text-align:right">
+      <div style="color:var(--muted);font-size:13px">Contact: +91 94142 6442 | +91 90793 26153</div>
+      <div style="color:var(--muted);font-size:12px;margin-top:6px">Made with care • Premium natural stone</div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple auto slider
+    let index = 0;
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+    function show(){
+      slides.style.transform = `translateX(-${index*100}%)`;
+    }
+    function nextSlide(){ index = (index+1)%total; show(); }
+    function prevSlide(){ index = (index-1+total)%total; show(); }
+    let autoplay = setInterval(nextSlide,4000);
+    // Pause on hover
+    document.querySelector('.slider').addEventListener('mouseenter', ()=> clearInterval(autoplay));
+    document.querySelector('.slider').addEventListener('mouseleave', ()=> autoplay = setInterval(nextSlide,4000));
+
+    // modal
+    function openModal(){ document.getElementById('modal').classList.add('open'); }
+    function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+    document.getElementById('storyBtn').addEventListener('click', ()=>{ document.getElementById('stories').scrollIntoView({behavior:'smooth'}); });
+
+    // demo send
+    function sendMessage(){
+      const m = document.getElementById('msg').value.trim();
+      if(!m) return alert('Please write a short message');
+      alert('Thank you — your message was sent to Lal Chand Rathi (demo).');
+      document.getElementById('msg').value='';
+    }
+
+    // small animation for qualities marquee duplication
+    // duplicate inner to create continuous scroll effect
+    document.querySelectorAll('.marquee .inner').forEach(el=>{ el.innerHTML = el.innerHTML + '     ' + el.innerHTML; });
+  </script>
+</body>
+  </html>
